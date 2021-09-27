@@ -1,3 +1,7 @@
+package Animal
+
+import generaAleatorio
+
 class Perro(nombre: String, raza: String, peso: Double, color: String) : Animal(nombre, raza, peso, color) {
 
 

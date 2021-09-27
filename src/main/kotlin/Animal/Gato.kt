@@ -1,3 +1,7 @@
+package Animal
+
+import generaAleatorio
+
 class Gato(nombre: String, raza: String, peso: Double, color: String) : Animal(nombre, raza, peso, color) {
 
 
@@ -6,7 +10,7 @@ class Gato(nombre: String, raza: String, peso: Double, color: String) : Animal(n
     }
 
     override fun hacerCaso() {
-        val randomValue = generaAleatorio(0,100)
+        val randomValue = generaAleatorio(0, 100)
         if(randomValue <= 5){
             println(this.nombre + "te ha hecho caso")
         }else{
