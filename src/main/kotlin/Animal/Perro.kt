@@ -5,8 +5,16 @@ import generaAleatorio
 class Perro(nombre: String, raza: String, peso: Double, color: String) : Animal(nombre, raza, peso, color) {
 
 
+    override fun comer() {
+        println("El perro " + this.nombre + " acaba de comer. ÑAM ÑAM")
+    }
+
+    override fun dormir() {
+        println("El perro " + this.nombre + " se ha echado la siesta")
+    }
+
     override fun hacerRuido() {
-        println(this.nombre + " acaba de ladrad")
+        println("El perro " + this.nombre + " acaba de ladrar")
     }
 
     override fun hacerCaso() {
@@ -20,6 +28,6 @@ class Perro(nombre: String, raza: String, peso: Double, color: String) : Animal(
     }
 
     fun sacaPaseo() {
-        println(this.nombre + " lo acaban de sacar a pasear")
+        println("El perro " + this.nombre + " lo acaban de sacar a pasear")
     }
 }

@@ -1,20 +1,15 @@
 import Animal.Elefante
 import Animal.Gato
 import Animal.Perro
+import Parque.Parque
+import Parque.factoriaParque
+import Parque.simulacion
 
 fun main(){
-    var perro1 : Perro = Perro("Tobi","Corgi",13.3,"Marron")
-    perro1.sacaPaseo()
-    perro1.hacerCaso()
-    perro1.hacerRuido()
+    var sectores: ArrayList<Any> = ArrayList(10)
+    var parque :Parque = factoriaParque()
 
-    var gato1: Gato = Gato("Michi", "Munchkin",5.2,"Pardo")
-    gato1.toserBolaPelo()
-    gato1.hacerCaso()
-    gato1.hacerRuido()
+    simulacion(parque)
 
-    var elefante1: Elefante = Elefante("Dumbo", "Indio",220.00,"Gris")
-   elefante1.hacerCaso()
-    elefante1.comer()
-    elefante1.dormir()
+
 }
