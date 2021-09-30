@@ -15,8 +15,8 @@ fun simulacion(parque: Parque) {
             Thread.sleep(1000)
             tiempo++
 
-            //este tiene que ser 10 -> tiene 2 para una probar la simulacion mas rapido
-            if (tiempo % 2 == 0) {
+            //este tiene que ser 10 -> puse 2 para probar la simulacion mas rapido
+            if (tiempo % 10 == 0) {
                 println("TIEMPO: " + tiempo+ " -> ")
                 newAnimalEnParque(parque)
             }
@@ -27,7 +27,7 @@ fun simulacion(parque: Parque) {
             }
 
             //este tiene que ser 15 -> tiene 10 para una probar la simulacion mas rapido
-            if (tiempo % 10 == 0) {
+            if (tiempo % 15 == 0) {
                 println("TIEMPO: " + tiempo+ " -> ")
                 simulacionCambioPosi(parque)
             }
@@ -57,7 +57,7 @@ fun simulacionCambioPosi(parque: Parque) {
     val posi = parque.comprobarSectoresVacios()
 
     do {
-        val posiAnimal = generaAleatorio(0, parque.sectores.count())
+        val posiAnimal = generaAleatorio(0, parque.sectores.size-1)
         if (parque.sectores[posiAnimal] is Animal) {
             if(posi != -1){
                 println("El animal " +parque.sectores[posiAnimal] +" SE HA CAMBIADO de posicion")

@@ -21,12 +21,12 @@ class Parque (sect: ArrayList<Any>, maxSectores:Int){
         if(capacidadDelParque() < this.maxSectores){
             for (a in sectores){
                 if (a == null){
-                    posi = sectores.indexOf(a)
+                    posi = sectores.indexOf(a) //devuelve la posi si esta vacio
                 }
             }
 
         }else{
-            posi =  -1
+            posi =  -1 // devuelve -1 si no esta vacio
         }
         return posi
     }
